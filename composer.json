@@ -1,6 +1,6 @@
 {
   "name": "sanovskiy/traitlib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Some typical traits for my projects",
   "authors": [
     {
@@ -14,7 +14,7 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "Sanovskiy\\Traits\\": "src"
+      "Sanovskiy\\Traits\\": "src/"
     }
   }
 }
