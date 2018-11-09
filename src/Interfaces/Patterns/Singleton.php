@@ -4,11 +4,11 @@
  * @copyright 2018 Pavel Terentyev <pavel.terentyev@gmail.com>
  */
 
-namespace Sanovskiy\Patterns\Interfaces;
+namespace Sanovskiy\Interfaces\Patterns;
 
 /**
  * Interface Singleton
- * @package Sanovskiy\Patterns\Interfaces
+ * @package Sanovskiy\Interfaces\Patterns
  */
 interface Singleton
 {
