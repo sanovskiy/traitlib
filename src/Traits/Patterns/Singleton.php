@@ -6,6 +6,7 @@
  */
 
 namespace Sanovskiy\Traits\Patterns;
+
 /**
  * Trait Singleton
  * @package Sanovskiy\Traits\Patterns
@@ -19,6 +20,9 @@ trait Singleton
 
     protected function __construct()
     {
+        if (method_exists($this, 'init')) {
+            $this->{'init'}(...func_get_args());
+        }
     }
 
     /**
@@ -28,7 +32,7 @@ trait Singleton
     {
         $class = static::class;
         if (!array_key_exists($class, self::$instances) || !(self::$instances[$class] instanceof $class)) {
-            self::$instances[$class] = new $class();
+            self::$instances[$class] = new $class(...func_get_args());
         }
         return self::$instances[$class];
     }
