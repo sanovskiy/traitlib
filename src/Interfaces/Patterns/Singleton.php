@@ -15,5 +15,5 @@ interface Singleton
     /**
      * @return static
      */
-    static function getInstance(): static;
+    public static function getInstance(): static;
 }
