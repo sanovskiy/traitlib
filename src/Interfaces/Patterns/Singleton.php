@@ -12,5 +12,8 @@ namespace Sanovskiy\Interfaces\Patterns;
  */
 interface Singleton
 {
-    static function getInstance();
+    /**
+     * @return static
+     */
+    static function getInstance(): static;
 }

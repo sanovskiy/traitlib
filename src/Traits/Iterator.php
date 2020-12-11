@@ -7,6 +7,8 @@
 
 namespace Sanovskiy\Traits;
 
+use JetBrains\PhpStorm\Pure;
+
 /**
  * Trait Iterator
  * @package Sanovskiy\Traits
@@ -16,7 +18,7 @@ trait Iterator
     /**
      * @var array
      */
-    protected $records = [];
+    protected array $records = [];
 
     /**
      * @return void
@@ -29,37 +31,32 @@ trait Iterator
     /**
      * @return mixed
      */
-    public function current()
+    #[Pure] public function current(): mixed
     {
-        $var = current($this->records);
-        return $var;
+        return current($this->records);
+    }
+
+    /**
+     * @return int|string|null
+     */
+    #[Pure] public function key(): null|int|string
+    {
+        return key($this->records);
     }
 
     /**
      * @return mixed
      */
-    public function key()
+    public function next(): mixed
     {
-        $var = key($this->records);
-        return $var;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function next()
-    {
-        $var = next($this->records);
-        return $var;
+        return next($this->records);
     }
 
     /**
      * @return bool
      */
-    public function valid()
+    #[Pure] public function valid(): bool
     {
-        $var = $this->current() !== false;
-        return $var;
+        return $this->current() !== false;
     }
-
 }
