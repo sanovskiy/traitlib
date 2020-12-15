@@ -7,8 +7,6 @@
 
 namespace Sanovskiy\Traits;
 
-use JetBrains\PhpStorm\Pure;
-
 /**
  * Trait Countable
  * @package Sanovskiy\Traits
@@ -18,12 +16,12 @@ trait Countable
     /**
      * @var array
      */
-    protected array $records = [];
+    protected  $records = [];
 
     /**
      * @return int
      */
-    #[Pure] public function count(): int
+    public function count()
     {
         return count($this->records);
     }
