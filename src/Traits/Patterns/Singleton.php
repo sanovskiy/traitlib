@@ -26,7 +26,7 @@ trait Singleton
     }
 
     /**
-     * @return Singleton
+     * @return static
      */
     public static function getInstance(): static
     {

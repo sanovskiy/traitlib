@@ -46,14 +46,14 @@ trait ArrayAccess
      * @param mixed $offset
      * @param mixed $value
      *
-     * @return mixed
+     * @return void
      */
-    public function offsetSet(mixed $offset, mixed $value): mixed
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-        if (is_null($offset) || empty($offset)) {
-            return null;
+        if (empty($offset)) {
+            return;
         }
-        return $this->records[$offset] = $value;
+        $this->records[$offset] = $value;
     }
 
     /**
@@ -61,7 +61,7 @@ trait ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset(mixed $offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->records[$offset]);
     }
