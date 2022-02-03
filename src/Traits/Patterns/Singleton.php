@@ -16,7 +16,7 @@ trait Singleton
     /**
      * @var Singleton[]
      */
-    private static $instances = [];
+    private static array $instances = [];
 
     protected function __construct()
     {
@@ -26,9 +26,9 @@ trait Singleton
     }
 
     /**
-     * @return Singleton
+     * @return static
      */
-    public static function getInstance()
+    public static function getInstance(): static
     {
         $class = static::class;
         if (!array_key_exists($class, self::$instances) || !(self::$instances[$class] instanceof $class)) {

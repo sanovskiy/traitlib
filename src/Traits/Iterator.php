@@ -16,12 +16,12 @@ trait Iterator
     /**
      * @var array
      */
-    protected $records = [];
+    protected array $records = [];
 
     /**
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->records);
     }
@@ -29,7 +29,7 @@ trait Iterator
     /**
      * @return mixed
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->records);
     }
@@ -37,7 +37,7 @@ trait Iterator
     /**
      * @return int|string|null
      */
-    public function key()
+    public function key(): int|string|null
     {
         return key($this->records);
     }
@@ -45,7 +45,7 @@ trait Iterator
     /**
      * @return mixed
      */
-    public function next()
+    public function next(): mixed
     {
         return next($this->records);
     }
@@ -53,7 +53,7 @@ trait Iterator
     /**
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->current() !== false;
     }
