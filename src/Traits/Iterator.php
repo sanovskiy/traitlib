@@ -47,9 +47,9 @@ trait Iterator
     /**
      * @return mixed
      */
-    public function next(): mixed
+    public function next(): void
     {
-        return next($this->records);
+        next($this->records);
     }
 
     /**
