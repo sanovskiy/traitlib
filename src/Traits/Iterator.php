@@ -23,7 +23,7 @@ trait Iterator
     /**
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->records);
     }
