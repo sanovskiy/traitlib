@@ -10,13 +10,10 @@ namespace Sanovskiy\Traits;
 /**
  * Trait Countable
  * @package Sanovskiy\Traits
+ * @property array $records
  */
 trait Countable
 {
-    /**
-     * @var array
-     */
-    protected $records = [];
 
     /**
      * @return int

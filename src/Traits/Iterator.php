@@ -10,14 +10,10 @@ namespace Sanovskiy\Traits;
 /**
  * Trait Iterator
  * @package Sanovskiy\Traits
+ * @property array $records
  */
 trait Iterator
 {
-    /**
-     * @var array
-     */
-    protected $records = [];
-
     /**
      * @return void
      */

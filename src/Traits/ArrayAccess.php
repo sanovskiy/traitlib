@@ -10,14 +10,10 @@ namespace Sanovskiy\Traits;
 /**
  * Trait ArrayAccess
  * @package Sanovskiy\Traits
+ * @property array $records
  */
 trait ArrayAccess
 {
-
-    /**
-     * @var array
-     */
-    protected  $records = [];
 
     /**
      * @param mixed $offset
