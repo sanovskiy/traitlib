@@ -16,12 +16,12 @@ trait Countable
     /**
      * @var array
      */
-    protected array $records = [];
+    protected $records = [];
 
     /**
      * @return int
      */
-    public function count(): int
+    public function count()
     {
         return count($this->records);
     }

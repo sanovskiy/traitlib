@@ -17,14 +17,14 @@ trait ArrayAccess
     /**
      * @var array
      */
-    protected array $records = [];
+    protected  $records = [];
 
     /**
      * @param mixed $offset
      *
      * @return bool
      */
-    public function offsetExists(mixed $offset): bool
+    public function offsetExists( $offset)
     {
         return isset($this->records[$offset]);
     }
@@ -34,7 +34,7 @@ trait ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet(mixed $offset): mixed
+    public function offsetGet( $offset)
     {
         if (isset($this->records[$offset])) {
             return $this->records[$offset];
@@ -46,9 +46,8 @@ trait ArrayAccess
      * @param mixed $offset
      * @param mixed $value
      *
-     * @return mixed
      */
-    public function offsetSet(mixed $offset, mixed $value): void
+    public function offsetSet( $offset,  $value)
     {
         if (empty($offset)) {
             return;
@@ -62,7 +61,7 @@ trait ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset(mixed $offset): void
+    public function offsetUnset( $offset)
     {
         unset($this->records[$offset]);
     }
