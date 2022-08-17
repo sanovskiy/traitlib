@@ -12,13 +12,10 @@ use JetBrains\PhpStorm\Pure;
 /**
  * Trait Iterator
  * @package Sanovskiy\Traits
+ * @property array $records
  */
 trait Iterator
 {
-    /**
-     * @var array
-     */
-    protected array $records = [];
 
     /**
      * @return void

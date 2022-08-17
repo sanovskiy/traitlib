@@ -12,14 +12,10 @@ use JetBrains\PhpStorm\Pure;
 /**
  * Trait Countable
  * @package Sanovskiy\Traits
+ * @property array $records
  */
 trait Countable
 {
-    /**
-     * @var array
-     */
-    protected array $records = [];
-
     /**
      * @return int
      */
